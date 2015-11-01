@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Tab | Settings</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/settings.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Appearance</h1>
+        <h2>Background</h2>
+        <table>
+            <tr>
+                <td>Background Color (while image is loading)</td>
+                <td><input id="bg_color" type="color"/></td>
+            </tr>
+
+            <tr>
+                <td>Background Image Type</td>
+                <td>
+                    <select id="bg_type">
+                        <option value="tumblr">Dynamic Image from Tumblr (Recommended)</option>
+                        <option value="src">Static Image from File or Internet</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tumblr Page to load images from (if selected above)</td>
+                <td><input id="tumblr_page"/></td>
+            </tr>
+
+            <tr>
+                <td>Or use the programs default tumblr image selection</td>
+                <td>
+                    <select id="default_tumblr">
+                        <option value="y" id="default_tumblr_y">Yes (Recommended)</option>
+                        <option value="n" id="default_tumblr_n">No</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <button onclick="settings.save()">Save</button>
+    </div>
+</body>
+</html>
